@@ -1,0 +1,24 @@
+[
+  {
+    "id": "specialist_gap_discovery",
+    "triggered": true,
+    "response": "I would begin with a read-only repository inspection and compare the actual stack and work with skills already available. I would not install skills merely because they are popular. I would present a short evidence-based candidate list and install only selected in-scope skills. Implementation is blocked because the feature is unspecified; I would obtain behavior, acceptance criteria, constraints, and affected surfaces before changing code. Then I would make the smallest conventional change, test proportionally, and avoid push, deploy, destructive migrations, infrastructure changes, or external dependencies without authorization.",
+    "elapsed_ms": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "tool_calls": null,
+    "retries": null,
+    "cost": null
+  },
+  {
+    "id": "factual_lookup",
+    "triggered": false,
+    "response": "HTTP status 204 No Content means the request succeeded, but the server has no response body to return.",
+    "elapsed_ms": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "tool_calls": null,
+    "retries": null,
+    "cost": null
+  }
+]

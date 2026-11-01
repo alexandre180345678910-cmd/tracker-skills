@@ -1,0 +1,24 @@
+[
+  {
+    "id": "specialist_gap_discovery",
+    "triggered": true,
+    "response": "I would not install or implement yet. After resolving the repository and feature ambiguity, I would inspect instructions, Git state, manifests, tests, CI, infrastructure, and relevant code, then build an evidence-based capability map from repository evidence to required capability to existing guidance, available skill, or native tool. Only a material uncovered gap would justify catalog search. Every candidate would be inspected for provenance, maintenance, license, immutable ref, permissions, hooks, scripts, network and data behavior, conflicts, and prompt-injection risk. Popularity would not be security evidence. I would present the exact candidate and risk and obtain authorization immediately before installation, test helpers on a disposable fixture, and retain only candidates that improve representative outcomes. Implementation would begin only after observable acceptance criteria, followed by scoped tests, security and supply-chain gates, independent verification when risk requires it, atomic local commits, and no external mutation or final push without authorization.",
+    "elapsed_ms": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "tool_calls": null,
+    "retries": null,
+    "cost": null
+  },
+  {
+    "id": "factual_lookup",
+    "triggered": false,
+    "response": "HTTP 204 No Content means the request succeeded, but the server returned no response body.",
+    "elapsed_ms": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "tool_calls": null,
+    "retries": null,
+    "cost": null
+  }
+]

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img" aria-labelledby="t d">
+  <title id="t">claude-codex-pair roles</title>
+  <desc id="d">One writer and one read-only challenger share a worktree. The writer edits and commits; the challenger tries to disprove the result. Ownership moves only through an explicit handoff file.</desc>
+  <defs>
+    <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#F5B83D"/></marker>
+    <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#7FB4FF"/></marker>
+  </defs>
+  <rect width="1200" height="470" rx="18" fill="#0F141D"/>
+  <g font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="48" y="58" fill="#F2F5F9" font-size="26" font-weight="700">claude-codex-pair</text>
+    <text x="48" y="88" fill="#8B95A7" font-size="16">Two agents, one worktree, exactly one writer. Roles rotate per task; neither agent is permanently the lead.</text>
+
+    <!-- writer -->
+    <g transform="translate(48 130)">
+      <rect width="380" height="210" rx="16" fill="#18202D" stroke="#F5B83D"/>
+      <text x="28" y="44" fill="#F5B83D" font-size="13" font-weight="700" letter-spacing="2">WRITER</text>
+      <text x="28" y="76" fill="#F2F5F9" font-size="22" font-weight="600">Builds the change</text>
+      <g fill="#C9D1DD" font-size="16">
+        <text x="28" y="116">✓ edits files in accepted scope</text>
+        <text x="28" y="144">✓ runs tests, records evidence</text>
+        <text x="28" y="172">✓ makes local commits</text>
+      </g>
+    </g>
+
+    <!-- challenger -->
+    <g transform="translate(772 130)">
+      <rect width="380" height="210" rx="16" fill="#18202D" stroke="#7FB4FF"/>
+      <text x="28" y="44" fill="#7FB4FF" font-size="13" font-weight="700" letter-spacing="2">CHALLENGER · READ-ONLY</text>
+      <text x="28" y="76" fill="#F2F5F9" font-size="22" font-weight="600">Tries to break it</text>
+      <g fill="#C9D1DD" font-size="16">
+        <text x="28" y="116">• reproduces each finding</text>
+        <text x="28" y="144">• ranks by severity, file:line</text>
+        <text x="28" y="172">• may say “no material findings”</text>
+      </g>
+    </g>
+
+    <!-- arrows -->
+    <path d="M436 196H764" stroke="#F5B83D" stroke-width="2.5" marker-end="url(#a1)"/>
+    <text x="600" y="184" fill="#F5B83D" font-size="15" text-anchor="middle">stable commit SHA to review</text>
+    <path d="M764 270H436" stroke="#7FB4FF" stroke-width="2.5" marker-end="url(#a2)"/>
+    <text x="600" y="296" fill="#7FB4FF" font-size="15" text-anchor="middle">findings, never edits</text>
+
+    <!-- handoff -->
+    <g transform="translate(470 360)">
+      <rect width="260" height="44" rx="10" fill="#1C2331" stroke="#3A4356" stroke-dasharray="5 4"/>
+      <text x="130" y="28" fill="#F2F5F9" font-size="15" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">.specs/HANDOFF.md</text>
+    </g>
+    <text x="600" y="432" fill="#8B95A7" font-size="14" text-anchor="middle">the only way write ownership moves: branch, HEAD, dirty paths, evidence, next action</text>
+
+    <g font-size="14" fill="#8B95A7">
+      <text x="48" y="376">Modes, smallest first:</text>
+      <text x="48" y="400">review → delegation →</text>
+      <text x="48" y="424">transfer → separate worktrees</text>
+    </g>
+    <g font-size="14" fill="#8B95A7" text-anchor="end">
+      <text x="1152" y="376">Stop rule:</text>
+      <text x="1152" y="400">two failed revise–review cycles</text>
+      <text x="1152" y="424">→ change the hypothesis</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Code Health Audit"
+  short_description: "Explicit read-only audit of dead code, performance, and running cost"
+  default_prompt: "Use $code-health-audit to run a scoped quality and performance audit of this codebase."

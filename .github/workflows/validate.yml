@@ -1,0 +1,32 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  skills:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+      - name: Unit tests
+        working-directory: skills/ship-with-confidence/scripts
+        run: python3 -m unittest -q
+      - name: Install validation
+        run: bash skills/ship-with-confidence/scripts/validate-install.sh
+      - name: Every skill has name and description
+        run: |
+          for f in skills/*/SKILL.md; do
+            head -n 5 "$f" | grep -q '^name: ' || { echo "missing name: $f"; exit 1; }
+            head -n 5 "$f" | grep -q '^description: ' || { echo "missing description: $f"; exit 1; }
+          done

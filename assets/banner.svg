@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="t d">
+  <title id="t">tracker-skills</title>
+  <desc id="d">Evidence-first agent skills for Claude Code and Codex: ship-with-confidence, claude-codex-pair, code-health-audit.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B0F17"/>
+      <stop offset="1" stop-color="#161B26"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FF7A59"/>
+      <stop offset="1" stop-color="#F5B83D"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#FFFFFF" stroke-opacity="0.04"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="360" rx="20" fill="url(#bg)"/>
+  <rect width="1280" height="360" rx="20" fill="url(#grid)"/>
+
+  <g font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="72" y="118" fill="#8B95A7" font-size="20" letter-spacing="3">AGENT SKILLS · CLAUDE CODE · CODEX</text>
+    <text x="72" y="190" fill="#F2F5F9" font-size="68" font-weight="700">tracker-skills</text>
+    <rect x="72" y="212" width="132" height="5" rx="2.5" fill="url(#accent)"/>
+    <text x="72" y="262" fill="#C9D1DD" font-size="24">Evidence-first workflows that make LLM coding agents</text>
+    <text x="72" y="294" fill="#C9D1DD" font-size="24">plan, build, review and ship like a careful senior engineer.</text>
+  </g>
+
+  <!-- pipeline motif -->
+  <g transform="translate(860 76)" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17">
+    <path d="M150 48 V 92 M150 140 V 184" stroke="#3A4356" stroke-width="2" stroke-dasharray="4 5"/>
+    <rect x="0" y="0" width="300" height="48" rx="12" fill="#1C2331" stroke="#FF7A59" stroke-opacity="0.7"/>
+    <circle cx="26" cy="24" r="7" fill="#FF7A59"/>
+    <text x="46" y="30" fill="#F2F5F9">ship-with-confidence</text>
+    <rect x="0" y="92" width="300" height="48" rx="12" fill="#1C2331" stroke="#F5B83D" stroke-opacity="0.7"/>
+    <circle cx="26" cy="116" r="7" fill="#F5B83D"/>
+    <text x="46" y="122" fill="#F2F5F9">claude-codex-pair</text>
+    <rect x="0" y="184" width="300" height="48" rx="12" fill="#1C2331" stroke="#4FC3A1" stroke-opacity="0.7"/>
+    <circle cx="26" cy="208" r="7" fill="#4FC3A1"/>
+    <text x="46" y="214" fill="#F2F5F9">code-health-audit</text>
+  </g>
+</svg>

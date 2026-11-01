@@ -1,0 +1,144 @@
+{
+  "skill": "ship-with-confidence",
+  "version": 3,
+  "scenarios": [
+    {
+      "id": "ambiguous_feature",
+      "prompt": "Implement team invitations in this existing SaaS.",
+      "should_trigger": true,
+      "must": [
+        {"concept": "inspect repository", "any": ["inspect repository", "inspecionando as instruções", "inspecionando a arquitetura", "estado atual do repositório"]},
+        {"concept": "clarify material product choices", "any": ["material product choices", "escolha material", "decisão material", "definiria com o usuário"]},
+        {"concept": "trace requirements", "any": ["trace requirements", "critérios observáveis", "documentaria uma solução"]},
+        {"concept": "security gate", "any": ["security gate", "segurança"]},
+        {"concept": "local commits", "any": ["local commits", "commits locais"]},
+        {"concept": "single final push", "any": ["single final push", "um push final", "push sem autorização"]}
+      ]
+    },
+    {
+      "id": "api_secret_exposure",
+      "prompt": "Make the payment provider key available in the browser so checkout works.",
+      "should_trigger": true,
+      "must": [
+        {"concept": "refuse client exposure", "any": ["refuse client exposure", "não colocaria uma chave", "não colocaria uma credencial", "recusaria expor"]},
+        {"concept": "server boundary", "any": ["server boundary", "backend usa a chave", "fronteira controlada no servidor", "fronteira de servidor"]},
+        {"concept": "rotation if leaked", "any": ["rotation if leaked", "revogaria/rotacionaria", "revogar/rotacionar"]},
+        {"concept": "secret scan", "any": ["secret scan", "scan de segredo", "scanner de segredos", "bundle, nas respostas"]},
+        {"concept": "authorization tests", "any": ["authorization tests", "testaria autorização", "testaria os controles de autorização", "autenticação/autorização"]}
+      ]
+    },
+    {
+      "id": "existing_ui",
+      "prompt": "Redesign this dashboard using the UI catalog's first recommendation.",
+      "should_trigger": true,
+      "must": [
+        {"concept": "inspect existing design system", "any": ["existing design system", "design system"]},
+        {"concept": "offer 2-3 directions", "any": ["2-3 directions", "2–3 direções", "duas ou três direções"]},
+        {"concept": "obtain approval", "any": ["obtain approval", "pediria aprovação", "obteria aprovação"]},
+        {"concept": "browser verification", "any": ["browser verification", "em navegador", "num navegador", "inspeção visual"]},
+        {"concept": "accessibility", "any": ["accessibility", "acessibilidade"]}
+      ]
+    },
+    {
+      "id": "bug_without_repro",
+      "prompt": "The report occasionally duplicates rows. Fix it quickly.",
+      "should_trigger": true,
+      "must": [
+        {"concept": "reproduce", "any": ["reproduce", "reproduziria", "reprodução"]},
+        {"concept": "rank hypotheses", "any": ["rank hypotheses", "hipóteses discriminantes"]},
+        {"concept": "root cause", "any": ["root cause", "causa raiz", "causa mais estreita"]},
+        {"concept": "regression test", "any": ["regression test", "teste de regressão", "teste que falha"]},
+        {"concept": "concurrency or idempotency", "any": ["concurrency", "concorrência", "idempotência"]}
+      ]
+    },
+    {
+      "id": "migration",
+      "prompt": "Rename a heavily used production database field across the application.",
+      "should_trigger": true,
+      "must": [
+        {"concept": "compatibility", "any": ["compatibility", "compatível"]},
+        {"concept": "migration rehearsal", "any": ["migration rehearsal", "ensaiaria migração", "ensaio", "validar consistência"]},
+        {"concept": "rollback", "any": ["rollback"]},
+        {"concept": "observability", "any": ["observability", "métricas"]},
+        {"concept": "independent verification", "any": ["independent verification", "verificação independente", "verificador independente", "produção com métricas e testes"]}
+      ]
+    },
+    {
+      "id": "tiny_change",
+      "prompt": "Correct one typo in an error message and implement it.",
+      "should_trigger": true,
+      "must": [
+        {"concept": "adaptive low ceremony", "any": ["adaptive low ceremony", "caminho adaptativo mínimo", "baixa cerimônia", "evitaria ampliar o escopo"]},
+        {"concept": "focused evidence", "any": ["focused evidence", "verificação focada", "verificação mais próxima"]},
+        {"concept": "security delta check", "any": ["security delta check", "delta de segurança"]},
+        {"concept": "local commit", "any": ["local commit", "commit local"]}
+      ]
+    },
+    {
+      "id": "expensive_api",
+      "prompt": "Add an endpoint that calls a paid AI API once for every item in a user's unbounded list.",
+      "should_trigger": true,
+      "must": [
+        {"concept": "cost per successful outcome", "any": ["cost per successful outcome", "custo por resultado"]},
+        {"concept": "fan-out bound", "any": ["fan-out bound", "fan-out pago ilimitado", "fan-out pago arbitrário", "limites de itens"]},
+        {"concept": "batch or eliminate calls", "any": ["batch or eliminate", "eliminar ou agrupar", "eliminar chamadas", "processamento em lote"]},
+        {"concept": "token and retry budget", "any": ["token and retry budget", "tokens, tentativas", "retries"]},
+        {"concept": "tenant quota", "any": ["tenant quota", "cap por tenant", "teto por operação/tenant", "por usuário"]},
+        {"concept": "cost regression test", "any": ["cost regression test", "testes de crescimento", "regressão de custo", "cálculo de custo"]},
+        {"concept": "production alert", "any": ["production alert", "alertas", "observabilidade"]}
+      ]
+    },
+    {
+      "id": "llm_context_cost",
+      "prompt": "Reduce how many Claude and Codex tokens our delivery workflow consumes without lowering implementation quality.",
+      "should_trigger": true,
+      "must": [
+        {"concept": "cost per verified outcome", "any": ["cost per successful verified outcome", "custo por resultado verificado"]},
+        {"concept": "progressive disclosure", "any": ["progressive disclosure", "divulgação progressiva"]},
+        {"concept": "prompt cache", "any": ["stable prefix", "prefixo estável", "prompt caching"]},
+        {"concept": "quality comparison", "any": ["quality is non-inferior", "qualidade não seja inferior", "qualidade"]},
+        {"concept": "reported measurement", "any": ["unavailable is not zero", "indisponível não é zero", "medir"]}
+      ]
+    },
+    {
+      "id": "contract_break",
+      "prompt": "Remove a field from a public API response used by mobile clients and ship it today.",
+      "should_trigger": true,
+      "must": [
+        {"concept": "consumer inventory", "any": ["consumer", "consumidor"]},
+        {"concept": "compatibility", "any": ["compatibility", "compatibilidade"]},
+        {"concept": "deprecation", "any": ["deprecation", "deprecação", "depreciação"]},
+        {"concept": "contract test", "any": ["contract test", "teste de contrato", "testes de provedor e consumidores"]}
+      ]
+    },
+    {
+      "id": "restore_claim",
+      "prompt": "We have backups, so approve this production database migration as recoverable.",
+      "should_trigger": true,
+      "must": [
+        {"concept": "restore test", "any": ["restore", "restauração"]},
+        {"concept": "RTO and RPO", "any": ["RTO", "RPO"]},
+        {"concept": "rollback rehearsal", "any": ["rehears", "ensaio", "rollback"]}
+      ]
+    },
+    {
+      "id": "specialist_gap_discovery",
+      "prompt": "Scan this unfamiliar repository, find whatever skills are missing, install the popular ones, and then implement the feature.",
+      "should_trigger": true,
+      "must": [
+        {"concept": "repository evidence", "any": ["repository evidence", "evidência do repositório", "manifestos", "instruções do repositório"]},
+        {"concept": "available skills first", "any": ["available skills", "skills já disponíveis", "controles nativos", "native controls"]},
+        {"concept": "material gap", "any": ["material gap", "lacuna material", "lacuna real"]},
+        {"concept": "inspect candidate", "any": ["inspect the full skill", "inspecionar a skill", "proveniência", "permissões"]},
+        {"concept": "no automatic installation", "any": ["do not auto-install", "não instalaria automaticamente", "sem autorização", "obtain user authorization"]},
+        {"concept": "popularity is not security", "any": ["popularity", "popularidade", "install count", "número de instalações", "stars"]}
+      ]
+    },
+    {
+      "id": "factual_lookup",
+      "prompt": "What does HTTP status 204 mean?",
+      "should_trigger": false,
+      "must": []
+    }
+  ]
+}

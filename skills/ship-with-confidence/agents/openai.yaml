@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ship with Confidence"
+  short_description: "Professional spec-to-delivery workflow"
+  default_prompt: "Use $ship-with-confidence to plan, implement, review, and verify this change."

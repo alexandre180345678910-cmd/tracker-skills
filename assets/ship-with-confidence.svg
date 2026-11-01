@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="t d">
+  <title id="t">ship-with-confidence workflow</title>
+  <desc id="d">Eight gated phases from intake to hand-off. Ceremony scales with risk: tiny, normal and high-risk paths. Each task is committed locally; one final push happens only after every gate passes.</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#5B667A"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="560" rx="18" fill="#0F141D"/>
+  <g font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="48" y="58" fill="#F2F5F9" font-size="26" font-weight="700">ship-with-confidence</text>
+    <text x="48" y="88" fill="#8B95A7" font-size="16">Eight phases, each closed by a gate. A failed or missing check counts as a failure, never as partial credit.</text>
+
+    <!-- row 1 -->
+    <g font-size="15">
+      <g transform="translate(48 120)">
+        <rect width="246" height="92" rx="12" fill="#18202D" stroke="#2C3547"/>
+        <text x="18" y="32" fill="#FF7A59" font-size="13" font-weight="700">01</text>
+        <text x="18" y="56" fill="#F2F5F9" font-size="18" font-weight="600">Intake &amp; baseline</text>
+        <text x="18" y="78" fill="#8B95A7">repo rules, current state</text>
+      </g>
+      <g transform="translate(330 120)">
+        <rect width="246" height="92" rx="12" fill="#18202D" stroke="#2C3547"/>
+        <text x="18" y="32" fill="#FF7A59" font-size="13" font-weight="700">02</text>
+        <text x="18" y="56" fill="#F2F5F9" font-size="18" font-weight="600">Align</text>
+        <text x="18" y="78" fill="#8B95A7">outcome, scope, criteria</text>
+      </g>
+      <g transform="translate(612 120)">
+        <rect width="246" height="92" rx="12" fill="#18202D" stroke="#2C3547"/>
+        <text x="18" y="32" fill="#FF7A59" font-size="13" font-weight="700">03</text>
+        <text x="18" y="56" fill="#F2F5F9" font-size="18" font-weight="600">Design</text>
+        <text x="18" y="78" fill="#8B95A7">threats, cost, rollback</text>
+      </g>
+      <g transform="translate(894 120)">
+        <rect width="246" height="92" rx="12" fill="#18202D" stroke="#2C3547"/>
+        <text x="18" y="32" fill="#FF7A59" font-size="13" font-weight="700">04</text>
+        <text x="18" y="56" fill="#F2F5F9" font-size="18" font-weight="600">Tasks</text>
+        <text x="18" y="78" fill="#8B95A7">vertical, atomic slices</text>
+      </g>
+      <path d="M298 166H326" stroke="#5B667A" stroke-width="2" marker-end="url(#arr)"/><path d="M580 166H608" stroke="#5B667A" stroke-width="2" marker-end="url(#arr)"/><path d="M862 166H890" stroke="#5B667A" stroke-width="2" marker-end="url(#arr)"/>
+      <path d="M1017 216V244H171V262" fill="none" stroke="#5B667A" stroke-width="2" marker-end="url(#arr)"/>
+
+      <!-- row 2 -->
+      <g transform="translate(48 268)">
+        <rect width="246" height="92" rx="12" fill="#18202D" stroke="#2C3547"/>
+        <text x="18" y="32" fill="#FF7A59" font-size="13" font-weight="700">05</text>
+        <text x="18" y="56" fill="#F2F5F9" font-size="18" font-weight="600">Execute</text>
+        <text x="18" y="78" fill="#8B95A7">test close to behavior</text>
+      </g>
+      <g transform="translate(330 268)">
+        <rect width="246" height="92" rx="12" fill="#18202D" stroke="#2C3547"/>
+        <text x="18" y="32" fill="#FF7A59" font-size="13" font-weight="700">06</text>
+        <text x="18" y="56" fill="#F2F5F9" font-size="18" font-weight="600">Review &amp; secure</text>
+        <text x="18" y="78" fill="#8B95A7">security is a release gate</text>
+      </g>
+      <g transform="translate(612 268)">
+        <rect width="246" height="92" rx="12" fill="#18202D" stroke="#2C3547"/>
+        <text x="18" y="32" fill="#FF7A59" font-size="13" font-weight="700">07</text>
+        <text x="18" y="56" fill="#F2F5F9" font-size="18" font-weight="600">Verify &amp; operate</text>
+        <text x="18" y="78" fill="#8B95A7">independent verifier</text>
+      </g>
+      <g transform="translate(894 268)">
+        <rect width="246" height="92" rx="12" fill="#18202D" stroke="#2C3547"/>
+        <text x="18" y="32" fill="#FF7A59" font-size="13" font-weight="700">08</text>
+        <text x="18" y="56" fill="#F2F5F9" font-size="18" font-weight="600">Learn &amp; hand off</text>
+        <text x="18" y="78" fill="#8B95A7">record reusable lessons</text>
+      </g>
+      <path d="M298 314H326" stroke="#5B667A" stroke-width="2" marker-end="url(#arr)"/><path d="M580 314H608" stroke="#5B667A" stroke-width="2" marker-end="url(#arr)"/><path d="M862 314H890" stroke="#5B667A" stroke-width="2" marker-end="url(#arr)"/>
+    </g>
+
+    <!-- commits lane -->
+    <g transform="translate(48 392)">
+      <text x="0" y="0" fill="#8B95A7" font-size="13" letter-spacing="2">GIT</text>
+      <path d="M0 30H790" stroke="#2C3547" stroke-width="3"/>
+      <g fill="#F5B83D">
+        <circle cx="120" cy="30" r="9"/><circle cx="300" cy="30" r="9"/><circle cx="480" cy="30" r="9"/><circle cx="660" cy="30" r="9"/>
+      </g>
+      <text x="120" y="62" fill="#C9D1DD" font-size="14" text-anchor="middle">task 1</text>
+      <text x="300" y="62" fill="#C9D1DD" font-size="14" text-anchor="middle">task 2</text>
+      <text x="480" y="62" fill="#C9D1DD" font-size="14" text-anchor="middle">task 3</text>
+      <text x="660" y="62" fill="#C9D1DD" font-size="14" text-anchor="middle">fixes</text>
+      <text x="390" y="88" fill="#8B95A7" font-size="14" text-anchor="middle">atomic local commits · never pushed as checkpoints</text>
+      <rect x="790" y="10" width="302" height="40" rx="20" fill="#14382F" stroke="#4FC3A1"/>
+      <text x="941" y="36" fill="#7FE0C2" font-size="15" font-weight="600" text-anchor="middle">one final push · all gates green</text>
+    </g>
+
+    <!-- risk paths -->
+    <g transform="translate(48 506)" font-size="14">
+      <rect width="1092" height="36" rx="10" fill="#151B26"/>
+      <text x="18" y="23" fill="#8B95A7">Ceremony scales with risk:</text>
+      <text x="214" y="23" fill="#C9D1DD"><tspan fill="#4FC3A1" font-weight="700">tiny</tspan> skips design and tasks</text>
+      <text x="476" y="23" fill="#C9D1DD"><tspan fill="#F5B83D" font-weight="700">normal</tspan> runs all eight</text>
+      <text x="700" y="23" fill="#C9D1DD"><tspan fill="#FF7A59" font-weight="700">high-risk</tspan> adds threat, cost and rollback approval</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# Editors and OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Local agent state and run output (never publish)
+.claude/settings.local.json
+.specs/HANDOFF.md
+*.log
+
+# Secrets
+.env
+.env.*
+!.env.example
